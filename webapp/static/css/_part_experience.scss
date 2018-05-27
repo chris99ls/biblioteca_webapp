@@ -79,6 +79,9 @@
 				background-position: 50%;
 				//filter: drop-shadow(0 0 7px rgba(0,0,0,0.2));
 
+
+				&--django { background-image: url("../img/exp/exp_django.svg"); }
+				&--python { background-image: url("../img/exp/exp_python.svg"); }
 				&--html5 { background-image: url("../img/exp/exp_html5.svg"); }
 				&--css3 { background-image: url("../img/exp/exp_css3.svg"); }
 				&--javascript { background-image: url("../img/exp/exp_javascript.svg"); }

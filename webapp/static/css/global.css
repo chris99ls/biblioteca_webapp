@@ -1126,9 +1126,13 @@ transition:.800ms;
   float: left;
   width: 20%;
   height: 120px;
-  background-image: url("../img/exp_html5.svg");
   background-size: 100px 100px;
   background-position: 50%;
+}
+
+
+.experience__icon--python {
+  background-image: url("../img/exp/exp_python.svg");
 }
 
 .experience__icon--html5 {
@@ -1143,18 +1147,6 @@ transition:.800ms;
   background-image: url("../img/exp/exp_javascript.svg");
 }
 
-.experience__icon--sass {
-  background-image: url("../img/exp/exp_sass.svg");
-}
-
-.experience__icon--jquery {
-  background-image: url("../img/exp/exp_jquery.svg");
-}
-
-.experience__icon--wordpress {
-  background-image: url("../img/exp/exp_wordpress.svg");
-}
-
 .experience__icon--git {
   background-image: url("../img/exp/exp_git.svg");
 }
@@ -1167,16 +1159,8 @@ transition:.800ms;
   background-image: url("../img/exp/exp_illustrator.svg");
 }
 
-.experience__icon--fireworks {
-  background-image: url("../img/exp/exp_fireworks.svg");
-}
-
 .experience__icon--bootstrap {
   background-image: url("../img/exp/exp_bootstrap.svg");
-}
-
-.experience__icon--foundation {
-  background-image: url("../img/exp/exp_foundation-glasses.svg");
 }
 
 .experience__icon-description {
