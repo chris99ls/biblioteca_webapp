@@ -1,0 +1,26 @@
+{% extends 'navbar.html' %}
+
+{% load widget_tweaks %}
+
+{% block body %}
+<div class="container">
+  
+    {% for hidden in form.hidden_fields %}
+      {{ hidden }}
+    {% endfor %}
+
+    <form method="get">
+        {{ filter.form.as_p }}
+        <button type="submit">Search</button>
+      </form>
+      <ul>
+      {% for libro in filter.qs %}
+        <li>{{ libro.title }} - {{ libro.author }} - {{ libro.isbn }} - {{ libro.subject }}</li>
+      {% endfor %}
+      </ul>
+
+
+
+
+</div>
+{% endblock %}

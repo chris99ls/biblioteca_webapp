@@ -24,3 +24,14 @@ class RegistrationForm(UserCreationForm):
         return user
 
 
+
+
+class Filter(forms.Form):
+    title= forms.CharField()
+    author= forms.CharField()
+    subject= forms.CharField()
+    isbn= forms.CharField()
+   
+
+
+
