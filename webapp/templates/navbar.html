@@ -27,7 +27,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <a class="navbar-brand" href="#">Biblioteca</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -36,9 +36,15 @@
       <!--nav bar link-->
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Prestiti">
+                <a class="nav-link" href="{% url 'home_utente' %}">
+                  <i class="fab fa-fw  fa-leanpub"></i>
+                  <span class="nav-link-text">Utente</span>
+                </a>
+              </li>
            
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'catalogo' %}">
               <i class="fas fa-fw  fa-archive"></i>
               <span class="nav-link-text">Catalogo</span>
             </a>
@@ -46,21 +52,11 @@
   
   
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Search_engine">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'search' %}">
               <i class=" fa-fw fab fa-searchengin"></i>
               <span class="nav-link-text">Search engine</span>
             </a>
           </li>
-  
-  
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Prestiti">
-            <a class="nav-link" href="#">
-              <i class="fab fa-fw  fa-leanpub"></i>
-              <span class="nav-link-text">Prestiti</span>
-            </a>
-          </li>
-          
-         
         </ul>
         <ul class="navbar-nav sidenav-toggler">
           <li class="nav-item">
@@ -85,26 +81,14 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-              <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+              <i class="fas fa-sign-out-alt" style="margin: 5px;"></i>Logout</a>
           </li>
         </ul>
       </div><!--end nav bar link-->
     </nav>
     <div class="content-wrapper">
       <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Navbar</li>
-        </ol>
-        
-      </div>
-      <!-- /.container-fluid-->
-      <!-- /.content-wrapper-->
-
-
+  
 
 
       {% block body %}
@@ -112,12 +96,6 @@
       
       
       {% endblock %}
-
-
-
-
-
-
 
 
 
@@ -147,7 +125,7 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
               <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-              <a class="btn btn-primary" href="login.html">Logout</a>
+              <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
             </div>
           </div>
         </div>
@@ -159,7 +137,9 @@
 
 
 
-
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
 
 
 
