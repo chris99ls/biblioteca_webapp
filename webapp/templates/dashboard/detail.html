@@ -1,0 +1,57 @@
+{% extends 'navbar.html' %}
+
+{% load widget_tweaks %}
+
+{% block body %}
+
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="#">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">Dettaglio</li>
+  </ol>
+
+  <section>
+        <div class="container py-3">
+          <div class="card" style="padding: 50px;">
+            <div class="row ">
+              <div class="col-md-3" style="margin-bottom: 50px;">
+                  <img src="{{book.tumbnail}}" class="img-fluid" style="height: 185px;width: 128px;">
+                </div>
+                <div class="col-md-8 px-3">
+                  <div class="card-block px-3">
+
+                    <h3 class="title mb-3">{{book.title}}</h3>
+
+
+                    <dl class="item-property">
+                        <dt>Author</dt>
+                        <dd><p>{{book.author}}</p></dd>
+                    </dl>
+
+                    <dl class="item-property">
+                        <dt>Description</dt>
+                        <dd><p>{{book.description}}</p></dd>
+                    </dl>
+                    <dl class="item-property">
+                        <dt>Isbn:</dt>
+                        <dd><p>{{book.isbn}}</p></dd>
+                    </dl>
+                      
+
+                    <hr>
+                      
+                    <a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-bookmark" style="margin: 5px"></i> Prenota </a>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+  
+{% endblock %}

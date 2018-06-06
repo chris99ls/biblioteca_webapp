@@ -21,26 +21,20 @@
           <div class="container-fluid">
             <div class="row">
               <div class="card-deck">
-                
-                
-               
-  
-       
+
+
                 {% for loan in loans %}
                 <!--Card-->
-                <a href="#" class="card-block clearfix">
+                <a href="{% url 'book_detail' pk=loan.pk %}" class="card-block clearfix">
                     <div class="card" style="max-width: 128px;" >
                       <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{loan.tumbnail}}" alt="thumbnail" >
                       <div class="card-footer" >
-                          {{ loan}}                  
+                          {{loan}}                  
                       </div>
                     </div>
                   </a>
-            
   
                   {% endfor %}
-
-
 
               </div>
             </div>
@@ -57,10 +51,24 @@
           <i class="fas fa-link" style="color: #868e96"></i> Prenotati</div>
         <div class="card-body">
           <!--start body-->
-          <div class="container-fluid">
-            <div class="row flex-row flex-nowrap">
-              <div class="scrolling-wrapper-flexbox">
+          
+            <div class="container-fluid">
+              <div class="row">
+                <div class="card-deck">
               
+                {% for book in booked_up %}
+                <!--Card-->
+                <a href="{% url 'book_detail' pk=book.pk %}" class="card-block clearfix">
+                    <div class="card" style="max-width: 128px;" >
+                      <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{book.tumbnail}}" alt="thumbnail" >
+                      <div class="card-footer" >
+                          {{ book}}                  
+                      </div>
+                    </div>
+                  </a>
+              
+                  {% endfor %}
+
                 </div>
             </div>
           </div><!--end body-->
@@ -80,11 +88,22 @@
           <div class="card-body">
             <!--start body-->
             <div class="container-fluid">
-              <div class="row flex-row flex-nowrap">
-                <div class="scrolling-wrapper-flexbox">
-                
-             
-                  
+              <div class="row">
+                <div class="card-deck">
+              
+                {% for book in already_read %}
+                <!--Card-->
+                <a href="{% url 'book_detail' pk=book.pk %}" class="card-block clearfix">
+                    <div class="card" style="max-width: 128px;" >
+                      <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{book.tumbnail}}" alt="thumbnail" >
+                      <div class="card-footer" >
+                          {{ book}}                  
+                      </div>
+                    </div>
+                  </a>
+            
+  
+                  {% endfor %}       
                 
                 </div>
               </div>
@@ -93,9 +112,4 @@
         </div><!--Gia Letti end-->
   
   
-  
-
-
-
-
-      {% endblock %}
+ {% endblock %}

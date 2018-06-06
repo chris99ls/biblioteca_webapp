@@ -15,5 +15,7 @@ urlpatterns = [
 
 
     url(r'^catalog/$',views.catalog,name='catalogo'),
-    url(r'^user/$',views.prestiti,name='home_utente'),
+    url(r'^user/$',views.user_home,name='home_utente'),
+
+    url(r'^book/detail/(?P<pk>[0-9]+)/$', views.detail , name='book_detail'),
 ]

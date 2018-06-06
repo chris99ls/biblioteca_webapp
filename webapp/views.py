@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect
 from webapp.froms import RegistrationForm
 from .filters import BookFilter
-from .models import Libro,Prestito
+from .models import Libro,Prestito,Prenotato,GiaVisto
 from django.contrib.auth.models import User
+from django.shortcuts import render, get_object_or_404
 # Create your views here.
 
 def home(request):
@@ -27,14 +28,36 @@ def catalog(request):
     return render(request, 'dashboard/catalog.html',{'books':books})
 
 
-def prestiti(request):
+def user_home(request):
     user = User.objects.get(username=request.user.username)
-    loans= Prestito.objects.get(n_tessera=user).books.all()
-    return render(request, 'dashboard/user_home.html',{'loans':loans,'user':request.user})
+    
+    #get prestiti collegati all'account loggato
+    try:
+      loans= Prestito.objects.get(n_tessera=user).books.all()
+    except Prestito.DoesNotExist:
+        booked_up = None
+    #get prenotati collegati all'account loggato
+    try:
+       booked_up=Prenotato.objects.get(user=user).books.all()
+    except Prenotato.DoesNotExist:
+        booked_up = None
+
+    #get gia letti collegati all'account loggato
+    #try:
+    already_read=GiaVisto.objects.get(user=user).books.all()
+    #except GiaVisto.DoesNotExist:
+     #   already_read = None
+
+
+    return render(request, 'dashboard/user_home.html',{'loans':loans,'booked_up':booked_up,'already_read':already_read})
 
 
 
-def search(request):
+def search(request,pk):
     book_list = Libro.objects.all()
     book_filter = BookFilter(request.GET, queryset=book_list)
     return render(request, 'search/book_searchengine.html', {'filter': book_filter})
+
+def detail(request, pk):
+    book = get_object_or_404(Libro, pk=pk)
+    return render(request,'dashboard/detail.html',{'book':book}) 
