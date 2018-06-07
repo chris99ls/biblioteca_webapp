@@ -26,9 +26,11 @@
                 {% for loan in loans %}
                 <!--Card-->
                 <a href="{% url 'book_detail'  xx='loan' pk=loan.pk %}" class="card-block clearfix">
-                    <div class="card" style="max-width: 128px;" >
+                    <div class="card" style="max-width: 128px;  margin-bottom: 15px;" >
                       <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{loan.tumbnail}}" alt="thumbnail" >
-                      <div class="card-footer" >
+                      <div class="card-footer" style="height: 115px ;white-space: break-word;
+                      overflow: hidden;
+                      text-overflow: ellipsis;" >
                           {{loan}}                  
                       </div>
                     </div>
@@ -59,9 +61,11 @@
                 {% for book in booked_up %}
                 <!--Card-->
                 <a href="{% url 'book_detail' xx='delete' pk=book.pk %}" class="card-block clearfix">
-                    <div class="card" style="max-width: 128px;" >
+                    <div class="card" style="max-width: 128px;  margin-bottom: 15px;" >
                       <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{book.tumbnail}}" alt="thumbnail" >
-                      <div class="card-footer" >
+                      <div class="card-footer" style="height: 115px ;white-space: break-word;
+                      overflow: hidden;
+                      text-overflow: ellipsis;" >
                           {{ book}}                  
                       </div>
                     </div>
@@ -94,9 +98,11 @@
                 {% for book in already_read %}
                 <!--Card-->
                 <a href="{% url 'book_detail'  xx='reserve' pk=book.pk %}" class="card-block clearfix">
-                    <div class="card" style="max-width: 128px;" >
+                    <div class="card" style="max-width: 128px;  margin-bottom: 15px;" >
                       <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{book.tumbnail}}" alt="thumbnail" >
-                      <div class="card-footer" >
+                      <div class="card-footer"  style="height: 115px ;white-space: break-word;
+                      overflow: hidden;
+                      text-overflow: ellipsis;">
                           {{ book}}                  
                       </div>
                     </div>

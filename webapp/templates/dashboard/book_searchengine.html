@@ -91,9 +91,11 @@
                   {% for libro in filter.qs %}
                     <!--Card-->
                     <a href="{% url 'book_detail' xx='reserve' pk=libro.pk  %}" class="card-block clearfix">
-                        <div class="card" style="max-width: 128px;" >
+                        <div class="card" style="max-width: 128px; margin-bottom: 15px;" >
                           <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{libro.tumbnail}}" alt="thumbnail" >
-                          <div class="card-footer" >
+                          <div class="card-footer" style="height: 115px ;white-space: break-word;
+                          overflow: hidden;
+                          text-overflow: ellipsis;" >
                               {{ libro.title }}                  
                           </div>
                         </div>

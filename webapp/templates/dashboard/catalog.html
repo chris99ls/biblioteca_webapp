@@ -27,10 +27,12 @@
             {% for book in books %}
                     <!--Card-->
                     <a href="{% url 'book_detail'  xx='reserve' pk=book.pk %}" class="card-block clearfix">
-                        <div class="card" style="max-width: 128px;" >
+                        <div class="card" style="max-width: 128px;  margin-bottom: 15px;" >
                           <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{book.tumbnail}}" alt="thumbnail" >
-                          <div class="card-footer" >
-                             {{book.title}}                   
+                          <div class="card-footer" style="height: 115px ;white-space: break-word;
+                          overflow: hidden;
+                          text-overflow: ellipsis;">
+                              {{book.title}}               
                           </div>
                         </div>
                       </a>
