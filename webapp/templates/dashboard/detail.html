@@ -2,6 +2,7 @@
 
 {% load widget_tweaks %}
 
+
 {% block body %}
 
 <!-- Breadcrumbs-->
@@ -42,7 +43,10 @@
 
                     <hr>
                       
-                    <a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-bookmark" style="margin: 5px"></i> Prenota </a>
+                    <a href="{% url 'reserve_book'  pk=book.pk %}" class="btn btn-lg btn-outline-primary text-uppercase prenota"> <i class="fas fa-bookmark" style="margin: 5px"></i> Prenota </a>
+                    <a href="{% url 'delete_book'  pk=book.pk %}" class="btn btn-lg btn-outline-primary text-uppercase elimina"> <i class="fas fa-trash-alt" style="margin: 5px"></i> Elimina dai miei Prenotati</a>
+                    <a href="#" class="btn btn-lg btn-outline-primary text-uppercase attiva_prestito"> <i class="fas fa-handshake" style="margin: 5px"></i> Attiva Prestito </a>
+
                   </div>
                 </div>
       
@@ -52,6 +56,34 @@
         </div>
       </section>
 
+      <script>
+          var vars = [], hash;
+          var hashes = window.location.href.slice(window.location.href.indexOf('/') + 1).split('/');
+          for(var i = 0; i < hashes.length; i++){
+              hash = hashes[i].split('=');
+              vars.push(hash[0]);
+              vars[hash[0]] = hash[1];
+          }
+         
+        
+        
 
+          if(vars[4]=='reserve'){
+            $('.elimina').hide();
+            $('.attiva_prestito').hide();
+          }else if (vars[4]=='delete'){
+            $('.prenota').hide();
+            $('.attiva_prestito').hide();
+          }else if(vars[4]=='loan'){
+            $('.attiva_prestito').hide();
+            $('.prenota').hide();
+            $('.elimina').hide();
+          }else{
+            $('.prenota').hide();
+            $('.elimina').hide();
+          }
+
+     </script>
+     
   
 {% endblock %}

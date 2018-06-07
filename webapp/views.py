@@ -58,6 +58,32 @@ def search(request,pk):
     book_filter = BookFilter(request.GET, queryset=book_list)
     return render(request, 'search/book_searchengine.html', {'filter': book_filter})
 
-def detail(request, pk):
+def detail(request, pk, xx):
     book = get_object_or_404(Libro, pk=pk)
     return render(request,'dashboard/detail.html',{'book':book}) 
+
+def reserve_book(request, pk):
+    user = User.objects.get(username=request.user.username)
+    book= Libro.objects.get(pk=pk)
+    p=Prenotato.objects.get(user=user)
+    if p:
+        p.books.add(book)
+    else:
+        p = Prenotato()
+        p.user=user
+        p.save()
+        p.books.add(book)
+
+    return redirect(user_home)
+
+
+def delete_book(request, pk):
+    user = User.objects.get(username=request.user.username)
+    book= Libro.objects.get(pk=pk)
+    p=Prenotato.objects.get(user=user)
+
+    
+    p.books.remove(book)
+
+    return redirect(user_home)
+    

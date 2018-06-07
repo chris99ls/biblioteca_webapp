@@ -17,5 +17,7 @@ urlpatterns = [
     url(r'^catalog/$',views.catalog,name='catalogo'),
     url(r'^user/$',views.user_home,name='home_utente'),
 
-    url(r'^book/detail/(?P<pk>[0-9]+)/$', views.detail , name='book_detail'),
+    url(r'^book/detail/(?P<xx>[\w\+]+)/(?P<pk>[0-9]+)/$', views.detail , name='book_detail'),
+    url(r'^book/reserve/(?P<pk>[0-9]+)/$', views.reserve_book, name='reserve_book'),
+    url(r'^book/delete/(?P<pk>[0-9]+)/$', views.delete_book, name='delete_book'),
 ]

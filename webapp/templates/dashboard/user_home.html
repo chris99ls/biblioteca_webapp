@@ -25,7 +25,7 @@
 
                 {% for loan in loans %}
                 <!--Card-->
-                <a href="{% url 'book_detail' pk=loan.pk %}" class="card-block clearfix">
+                <a href="{% url 'book_detail'  xx='loan' pk=loan.pk %}" class="card-block clearfix">
                     <div class="card" style="max-width: 128px;" >
                       <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{loan.tumbnail}}" alt="thumbnail" >
                       <div class="card-footer" >
@@ -58,7 +58,7 @@
               
                 {% for book in booked_up %}
                 <!--Card-->
-                <a href="{% url 'book_detail' pk=book.pk %}" class="card-block clearfix">
+                <a href="{% url 'book_detail' xx='delete' pk=book.pk %}" class="card-block clearfix">
                     <div class="card" style="max-width: 128px;" >
                       <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{book.tumbnail}}" alt="thumbnail" >
                       <div class="card-footer" >
@@ -93,7 +93,7 @@
               
                 {% for book in already_read %}
                 <!--Card-->
-                <a href="{% url 'book_detail' pk=book.pk %}" class="card-block clearfix">
+                <a href="{% url 'book_detail'  xx='reserve' pk=book.pk %}" class="card-block clearfix">
                     <div class="card" style="max-width: 128px;" >
                       <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{book.tumbnail}}" alt="thumbnail" >
                       <div class="card-footer" >
