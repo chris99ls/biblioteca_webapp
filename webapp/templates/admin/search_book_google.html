@@ -1,0 +1,52 @@
+{% extends 'navbar_admin.html' %}
+{% load staticfiles %}
+
+
+
+{% block body %}
+
+    <div class="content-wrap" >
+    <div >
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group" id="adv-search">
+                    <input type="text" class="form-control" placeholder="Search for book title" id="search"/>
+                    <div class="input-group-btn">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary" id="button">Cerca</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card mb-3" style="margin: 20px;">
+                    <div class="card-header">
+                        <i class="fas fa-fw  fa-archive" style="color: #868e96"></i> Result</div>
+                    <div class="card-body">
+                        <!--start body-->
+                        <div class="container-fluid">
+                        <div class="row">
+                            <div class="card-deck" id="result">
+                            
+                            </div>
+                            <div id="detail">
+                                
+                            </div>
+                        </div>
+                        </div><!--end body-->
+                    </div>
+                    </div><!--Prestiti end-->
+            
+
+
+
+        </div>
+    </div>
+
+    
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+{% endblock %}

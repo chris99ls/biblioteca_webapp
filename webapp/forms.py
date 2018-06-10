@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from .models import Libro
 
 class RegistrationForm(UserCreationForm):
     classe= forms.CharField(required=True)
@@ -23,15 +24,18 @@ class RegistrationForm(UserCreationForm):
 
         return user
 
-
-
-
 class Filter(forms.Form):
     title= forms.CharField()
     author= forms.CharField()
     subject= forms.CharField()
     isbn= forms.CharField()
    
+
+class BookForm(forms.ModelForm):
+
+    class Meta:
+        model = Libro
+        fields = ('title', 'author','description','isbn','tumbnail')
 
 
 

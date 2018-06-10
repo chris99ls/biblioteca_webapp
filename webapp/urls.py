@@ -20,4 +20,9 @@ urlpatterns = [
     url(r'^book/detail/(?P<xx>[\w\+]+)/(?P<pk>[0-9]+)/$', views.detail , name='book_detail'),
     url(r'^book/reserve/(?P<pk>[0-9]+)/$', views.reserve_book, name='reserve_book'),
     url(r'^book/delete/(?P<pk>[0-9]+)/$', views.delete_book, name='delete_book'),
+
+    url(r'^administrator/search/$', views.search_book_google, name='search_book_google'),
+    url(r'^administrator/search/add/(?P<pk>[0-9]+)$', views.add_book, name='add_success'),
+
+
 ]
