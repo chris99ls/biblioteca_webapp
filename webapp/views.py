@@ -5,6 +5,7 @@ from .models import Libro,Prestito,Prenotato,GiaVisto
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 from django.contrib.admin.views.decorators import staff_member_required
 
 
@@ -14,6 +15,7 @@ import json
 
 
 def home(request):
+    logout(request)
     return render(request, 'webapp/index.html', {})
 
 
@@ -36,18 +38,20 @@ def catalog(request):
 
 @login_required
 def user_home(request):
+    
+    
     user = User.objects.get(username=request.user.username)
     
     #get prestiti collegati all'account loggato
     try:
-      loans= Prestito.objects.get(n_tessera=user).books.all()
+        loans= Prestito.objects.get(n_tessera=user).books.all()
     except Prestito.DoesNotExist:
-        booked_up = None
+            loans = None
     #get prenotati collegati all'account loggato
     try:
-       booked_up=Prenotato.objects.get(user=user).books.all()
+        booked_up=Prenotato.objects.get(user=user).books.all()
     except Prenotato.DoesNotExist:
-        booked_up = None
+            booked_up = None
 
     #get gia letti collegati all'account loggato
     try:
@@ -57,7 +61,6 @@ def user_home(request):
 
 
     return render(request, 'dashboard/user_home.html',{'loans':loans,'booked_up':booked_up,'already_read':already_read})
-
 
 @login_required
 def search(request,pk):
@@ -74,25 +77,19 @@ def detail(request, pk, xx):
 
 @login_required
 def reserve_book(request, pk):
-    user = User.objects.get(username=request.user.username)
-    book= Libro.objects.get(pk=pk)
-    p=Prenotato.objects.get(user=user)
-    if p:
-        p.books.add(book)
-    else:
-        p = Prenotato()
-        p.user=user
-        p.save()
-        p.books.add(book)
+    #aggiungere controllo se libro già in prestito 
+    
+    book = Libro.objects.get(pk=pk)
+    p,created = Prenotato.objects.get_or_create(user=request.user)
+    p.books.add(book)
 
     return redirect(user_home)
 
 
 @login_required
 def delete_book(request, pk):
-    user = User.objects.get(username=request.user.username)
     book= Libro.objects.get(pk=pk)
-    p=Prenotato.objects.get(user=user)
+    p=Prenotato.objects.get(user=request.user)
 
     
     p.books.remove(book)
@@ -104,6 +101,8 @@ def delete_book(request, pk):
 def search_book_google(request):
     return render(request, 'admin/search_book_google.html',{})
 
+
+@staff_member_required
 def add_book(request,pk):
     url= request.path
     
@@ -133,6 +132,16 @@ def add_book(request,pk):
     book = Libro.objects.create(title=titolo, author=autori, description=descrizioni, isbn=int(isbn), tumbnail=img)
     
     if Libro.objects.get(pk=isbn):
-        return render(request,'admin/success.html',{})
+        return redirect(admin_catalog)
     else:
         return render(request,'admin/fail.html',{})
+
+
+@staff_member_required
+def admin_home(request):
+    return render(request,'admin/admin_home.html',{})
+    
+@staff_member_required
+def admin_catalog(request):
+    books = Libro.objects.all() 
+    return render(request, 'admin/admin_catalog.html',{'books':books})

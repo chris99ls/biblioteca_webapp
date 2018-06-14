@@ -71,18 +71,12 @@
 
 			
 
-			<!--div class="header__social-icons">
-				<a target="_blank" href="_blank"><i class="fas fa-user-plus"></i></a>
-
-				<Fixing search > 
-				<div class="search-container">
-					<form action="/action_page.php">
-						<input type="text" placeholder="Search.." name="search">
-						<button type="submit"><i class="fa fa-search"></i></button>
-					</form>
+			<div class="header__social-icons">
+				<div class="search-container" >
+						<a href="{% url 'admin_home' %}" class="hero__button  " style="font-size: 100%">Admin Log In &nbsp; <i class="fas fa-user-tie"></i></a>
 				</div>
 
-			</div-->
+			</div>
 
 
 
@@ -92,7 +86,7 @@
 			<a href="#start" class="header__title-wrapper  js-smooth-scroll">
 				<div class="header__title-main">Biblioteca</div>
 				<div class="header__title-sub">By Christian Lisi</div>
-			</a>		
+			</a>
 		</div>
 	</header>
 	<!-- End Header -->
@@ -121,10 +115,10 @@
 
 						<!--BOTTONE ENTRA IN LIBRERIA-->
 					<div class="hero__call-to-action">
-						<a href="login/" class="hero__button  ghost-button  ghost-button--hero">Entra subito &nbsp; <i class="fas fa-user"></i></a>
+						<a href="{% url 'login' %}" class="hero__button  ghost-button  ghost-button--hero"  style="width: 80%">Log In &nbsp; <i class="fas fa-user"></i></a>
 					</div>
 					<div class="hero__call-to-action">
-							<a href="register/" class="hero__button  ghost-button  ghost-button--hero">Registrati &nbsp; <i class="fas fa-user-plus"></i></a>
+							<a href="{% url 'register' %}" class="hero__button  ghost-button  ghost-button--hero" style="width: 80%">Sign Up&nbsp; <i class="fas fa-user-plus"></i></a>
 					</div>
 
 
@@ -316,17 +310,6 @@
 
 	</div>
 	<!-- End Scrollable Content -->
-
-
-
-
-
-
-
-
-
-
-
 
 	<!-- Scripts postload -->
 	<script src="{% static '/js/dependencies.min.js' %}" type="text/javascript"></script>

@@ -1,0 +1,54 @@
+{% extends 'navbar_admin.html' %}
+
+{% load widget_tweaks %}
+
+
+{% block body %}
+
+    
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">My Dashboard</li>
+      </ol>   
+
+      <!--Catalogo-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fas fa-fw  fa-archive" style="color: #868e96"></i> Catalogo</div>
+        <div class="card-body">
+          <!--start body-->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="card-deck">
+
+            {% for book in books %}
+                    <!--Card-->
+                    <a href="{% url 'book_detail'  xx='reserve' pk=book.pk %}" class="card-block clearfix">
+                        <div class="card" style="max-width: 128px;  margin-bottom: 15px;" >
+                          <img class="card-img-left img-responsive" style="width: 128px;height: 185px;object-fit: cover;" src="{{book.tumbnail}}" alt="thumbnail" >
+                          <div class="card-footer" style="height: 115px ;white-space: break-word;
+                          overflow: hidden;
+                          text-overflow: ellipsis;">
+                              {{book.title}}               
+                          </div>
+                        </div>
+                      </a>
+                
+      
+            {% endfor %}
+
+
+
+
+              </div>
+            </div>
+          </div><!--end body-->
+        </div>
+      </div><!--Prestiti end-->
+
+
+
+{% endblock %}
