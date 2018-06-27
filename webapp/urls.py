@@ -20,12 +20,17 @@ urlpatterns = [
 
     url(r'^book/detail/(?P<xx>[\w\+]+)/(?P<pk>[0-9]+)/$', views.detail , name='book_detail'),
     url(r'^book/reserve/(?P<pk>[0-9]+)/$', views.reserve_book, name='reserve_book'),
-    url(r'^book/delete/(?P<pk>[0-9]+)/$', views.delete_book, name='delete_book'),
+    url(r'^book/delete-reserved/(?P<pk>[0-9]+)/$', views.delete_reserved_book, name='delete_reserved_book'),
 
     url(r'^administrator/search/$', views.search_book_google, name='search_book_google'),
-    url(r'^administrator/search/add/(?P<pk>[0-9]+)$', views.add_book, name='add_success'),
-     url(r'^administartor/catalog/$',views.admin_catalog,name='admin_catalog'),
+    url(r'^administrator/search/add/(?P<pk>[0-9]+)/$', views.add_book, name='add_success'),
+    url(r'^administartor/catalog/$',views.admin_catalog,name='admin_catalog'),
     url(r'^administrator/$', views.admin_home, name='admin_home'),
-    
+    url(r'^administrator/user_detail/(?P<xx>[\w\+]+)/$', views.admin_user_detail, name='admin_user_detail'),
+    url(r'^administrator/user_book_detail/(?P<op>[\w\+]+)/(?P<user>[\w\+]+)/(?P<pk>[0-9]+)/$', views.admin_detail, name='admin_detail'),
+   
+   
+    url(r'^administrator/user_book_detail/(?P<user>[\w\+]+)/(?P<pk>[0-9]+)/give/$', views.admin_reserved_book, name='give'),
+    url(r'^administrator/user_book_detail/(?P<user>[\w\+]+)/(?P<pk>[0-9]+)/take/$', views.admin_loaned_book, name='take'),
 
 ]

@@ -63,16 +63,3 @@ class Prenotato(models.Model):
 
     def publish(self):
         self.save()
-
-
-class GiaVisto(models.Model):
-
-    id=models.AutoField(primary_key='True')
-    user= models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    books= models.ManyToManyField(Libro)
-
-    def __str__(self):
-        return self.user.username
-
-    def publish(self):
-        self.save()

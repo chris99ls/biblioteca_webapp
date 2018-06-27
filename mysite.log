@@ -1,0 +1,618 @@
+[16/Jun/2018 17:05:25] DEBUG [django.template:878] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00F64078>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: christian>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00FDEF30>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x043356B0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+[16/Jun/2018 17:05:25] DEBUG [django.template:878] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00F64078>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: christian>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00FDEF30>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x043356B0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+[16/Jun/2018 17:05:25] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 5214
+[16/Jun/2018 17:05:27] DEBUG [django.template:878] Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+[16/Jun/2018 17:05:27] DEBUG [django.template:878] Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00F64D20>>}]
+[16/Jun/2018 17:05:27] DEBUG [django.template:878] Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+[16/Jun/2018 17:05:27] DEBUG [django.template:878] Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+[16/Jun/2018 17:05:27] DEBUG [django.template:878] Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+[16/Jun/2018 17:05:27] INFO [django.server:124] "GET /admin/auth/user/ HTTP/1.1" 200 7133
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/js/actions.min.js
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 117
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/js/prepopulate.min.js
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/js/actions.min.js HTTP/1.1" 404 104
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/js/prepopulate.min.js HTTP/1.1" 404 108
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 119
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/img/search.svg
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/img/search.svg HTTP/1.1" 404 101
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/img/icon-no.svg
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/img/icon-no.svg HTTP/1.1" 404 102
+[16/Jun/2018 17:05:27] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 117
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/js/actions.min.js
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/js/actions.min.js HTTP/1.1" 404 104
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/js/prepopulate.min.js
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/js/prepopulate.min.js HTTP/1.1" 404 108
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 119
+[16/Jun/2018 17:05:27] WARNING [django.request:93] Not Found: /static/admin/img/sorting-icons.svg
+[16/Jun/2018 17:05:27] WARNING [django.server:124] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 404 108
+[16/Jun/2018 17:05:33] DEBUG [django.template:878] Exception while resolving variable 'is_popup' in template 'admin/delete_selected_confirmation.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00F64DB0>>, 'request': <WSGIRequest: POST '/admin/auth/user/'>, 'user': <SimpleLazyObject: <User: christian>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x003A4C90>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x003A48F0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'title': 'Are you sure?', 'objects_name': 'user', 'deletable_objects': [['User: <a href="/admin/auth/user/2/change/">m_lisiangelo</a>', ['Prenotato: <a href="/admin/webapp/prenotato/1/change/">m_lisiangelo</a>']]], 'model_count': dict_items([('users', 1), ('prenotatos', 1)]), 'queryset': <QuerySet [<User: m_lisiangelo>]>, 'perms_lacking': set(), 'protected': [], 'opts': <Options for User>, 'action_checkbox_name': '_selected_action', 'media': Media(css={}, js=['admin/js/vendor/jquery/jquery.min.js', 'admin/js/jquery.init.js', 'admin/js/core.js', 'admin/js/admin/RelatedObjectLookups.js', 'admin/js/actions.min.js', 'admin/js/urlify.js', 'admin/js/prepopulate.min.js', 'admin/js/vendor/xregexp/xregexp.min.js']), 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+[16/Jun/2018 17:05:33] DEBUG [django.template:878] Exception while resolving variable 'is_popup' in template 'admin/delete_selected_confirmation.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00F64DB0>>, 'request': <WSGIRequest: POST '/admin/auth/user/'>, 'user': <SimpleLazyObject: <User: christian>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x003A4C90>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x003A48F0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'title': 'Are you sure?', 'objects_name': 'user', 'deletable_objects': [['User: <a href="/admin/auth/user/2/change/">m_lisiangelo</a>', ['Prenotato: <a href="/admin/webapp/prenotato/1/change/">m_lisiangelo</a>']]], 'model_count': dict_items([('users', 1), ('prenotatos', 1)]), 'queryset': <QuerySet [<User: m_lisiangelo>]>, 'perms_lacking': set(), 'protected': [], 'opts': <Options for User>, 'action_checkbox_name': '_selected_action', 'media': Media(css={}, js=['admin/js/vendor/jquery/jquery.min.js', 'admin/js/jquery.init.js', 'admin/js/core.js', 'admin/js/admin/RelatedObjectLookups.js', 'admin/js/actions.min.js', 'admin/js/urlify.js', 'admin/js/prepopulate.min.js', 'admin/js/vendor/xregexp/xregexp.min.js']), 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+[16/Jun/2018 17:05:33] INFO [django.server:124] "POST /admin/auth/user/ HTTP/1.1" 200 3511
+[16/Jun/2018 17:05:33] WARNING [django.request:93] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[16/Jun/2018 17:05:33] WARNING [django.server:124] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 117
+[16/Jun/2018 17:05:33] WARNING [django.request:93] Not Found: /static/admin/js/actions.min.js
+[16/Jun/2018 17:05:33] WARNING [django.request:93] Not Found: /static/admin/js/prepopulate.min.js
+[16/Jun/2018 17:05:33] WARNING [django.server:124] "GET /static/admin/js/prepopulate.min.js HTTP/1.1" 404 108
+[16/Jun/2018 17:05:33] WARNING [django.server:124] "GET /static/admin/js/actions.min.js HTTP/1.1" 404 104
+[16/Jun/2018 17:05:33] WARNING [django.request:93] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[16/Jun/2018 17:05:33] WARNING [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 119
+[16/Jun/2018 17:05:33] WARNING [django.request:93] Not Found: /static/admin/js/cancel.js
+[16/Jun/2018 17:05:33] WARNING [django.server:124] "GET /static/admin/js/cancel.js HTTP/1.1" 404 99
+[16/Jun/2018 17:05:33] WARNING [django.request:93] Not Found: /static/admin/js/prepopulate.min.js
+[16/Jun/2018 17:05:33] WARNING [django.server:124] "GET /static/admin/js/prepopulate.min.js HTTP/1.1" 404 108
+[16/Jun/2018 17:05:33] WARNING [django.request:93] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[16/Jun/2018 17:05:33] WARNING [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 119
+[16/Jun/2018 17:05:33] WARNING [django.request:93] Not Found: /static/admin/js/cancel.js
+[16/Jun/2018 17:05:33] WARNING [django.server:124] "GET /static/admin/js/cancel.js HTTP/1.1" 404 99
+[16/Jun/2018 17:05:44] INFO [django.server:124] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[16/Jun/2018 17:05:51] DEBUG [django.template:878] Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+[16/Jun/2018 17:05:51] DEBUG [django.template:878] Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00F64DB0>>}]
+[16/Jun/2018 17:05:51] DEBUG [django.template:878] Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+[16/Jun/2018 17:05:51] DEBUG [django.template:878] Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+[16/Jun/2018 17:05:51] INFO [django.server:124] "GET /admin/auth/user/ HTTP/1.1" 200 6817
+[16/Jun/2018 17:05:51] INFO [django.server:124] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[16/Jun/2018 17:05:51] ERROR [django.server:124] "GET /admin/auth/user/ HTTP/1.1" 500 59
+[16/Jun/2018 17:05:51] DEBUG [django.template:878] Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+[16/Jun/2018 17:05:51] DEBUG [django.template:878] Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00EF6588>>}]
+[16/Jun/2018 17:05:51] DEBUG [django.template:878] Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+[16/Jun/2018 17:05:51] DEBUG [django.template:878] Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+[16/Jun/2018 17:05:51] INFO [django.server:124] "GET /admin/auth/user/ HTTP/1.1" 200 6817
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 117
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/js/actions.min.js
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/js/prepopulate.min.js
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/js/actions.min.js HTTP/1.1" 404 104
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/img/search.svg
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/js/prepopulate.min.js HTTP/1.1" 404 108
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 119
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/img/search.svg HTTP/1.1" 404 101
+[16/Jun/2018 17:05:51] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 117
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/js/actions.min.js
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/js/actions.min.js HTTP/1.1" 404 104
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/js/prepopulate.min.js
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/js/prepopulate.min.js HTTP/1.1" 404 108
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 119
+[16/Jun/2018 17:05:51] WARNING [django.request:93] Not Found: /static/admin/img/sorting-icons.svg
+[16/Jun/2018 17:05:51] WARNING [django.server:124] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 404 108
+[16/Jun/2018 17:06:41] INFO [django.server:124] "GET / HTTP/1.1" 200 10738
+[16/Jun/2018 17:06:41] WARNING [django.request:93] Not Found: /static/js/dependencies.min.js
+[16/Jun/2018 17:06:41] WARNING [django.request:93] Not Found: /static/js/global.js
+[16/Jun/2018 17:06:41] WARNING [django.server:124] "GET /static/js/dependencies.min.js HTTP/1.1" 404 103
+[16/Jun/2018 17:06:41] WARNING [django.server:124] "GET /static/js/global.js HTTP/1.1" 404 93
+[16/Jun/2018 17:06:51] INFO [django.server:124] "GET /login/ HTTP/1.1" 200 1687
+[16/Jun/2018 17:07:03] INFO [django.server:124] "POST /login/ HTTP/1.1" 302 0
+[16/Jun/2018 17:07:06] INFO [django.server:124] "GET /user/ HTTP/1.1" 200 8671
+[16/Jun/2018 17:07:16] INFO [django.server:124] "GET /administrator/ HTTP/1.1" 200 8214
+[16/Jun/2018 17:07:16] DEBUG [django.template:878] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00EFDC90>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: christian>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00F1AA90>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x00F1A650>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+[16/Jun/2018 17:07:16] DEBUG [django.template:878] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00EFDC90>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: christian>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00F1AA90>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x00F1A650>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Webapp', 'app_label': 'webapp', 'app_url': '/admin/webapp/', 'has_module_perms': True, 'models': [{'name': 'Libros', 'object_name': 'Libro', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/libro/', 'add_url': '/admin/webapp/libro/add/'}, {'name': 'Prenotatos', 'object_name': 'Prenotato', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prenotato/', 'add_url': '/admin/webapp/prenotato/add/'}, {'name': 'Prestitos', 'object_name': 'Prestito', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/prestito/', 'add_url': '/admin/webapp/prestito/add/'}, {'name': 'Sinossis', 'object_name': 'Sinossi', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/webapp/sinossi/', 'add_url': '/admin/webapp/sinossi/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+[16/Jun/2018 17:07:16] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 5461
+[16/Jun/2018 17:07:26] INFO [django.server:124] "GET /administrator/user_detail/christian/ HTTP/1.1" 200 7131
+[16/Jun/2018 17:07:32] INFO [django.server:124] "GET /administrator/search/ HTTP/1.1" 200 7329
+[16/Jun/2018 17:07:41] ERROR [django.request:118] Internal Server Error: /administrator/search/add/9781593272883/
+Traceback (most recent call last):
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\myvenv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Christian\Desktop\biblioteca_webapp\webapp\views.py", line 114, in add_book
+    a = json.load(urllib.request.urlopen("https://www.googleapis.com/books/v1/volumes?q="+isbn))
+  File "C:\Program Files (x86)\Python36-32\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Program Files (x86)\Python36-32\lib\urllib\request.py", line 532, in open
+    response = meth(req, response)
+  File "C:\Program Files (x86)\Python36-32\lib\urllib\request.py", line 642, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "C:\Program Files (x86)\Python36-32\lib\urllib\request.py", line 570, in error
+    return self._call_chain(*args)
+  File "C:\Program Files (x86)\Python36-32\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "C:\Program Files (x86)\Python36-32\lib\urllib\request.py", line 650, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+[16/Jun/2018 17:07:41] ERROR [django.server:124] "GET /administrator/search/add/9781593272883/ HTTP/1.1" 500 27

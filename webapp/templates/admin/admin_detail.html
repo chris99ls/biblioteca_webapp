@@ -1,4 +1,4 @@
-{% extends 'navbar.html' %}
+{% extends 'navbar_admin.html' %}
 
 {% load widget_tweaks %}
 
@@ -12,7 +12,7 @@
     </li>
     <li class="breadcrumb-item active">Dettaglio</li>
   </ol>
-
+  
   <section>
         <div class="container py-3">
           <div class="card" style="padding: 50px;">
@@ -43,9 +43,11 @@
 
                     <hr>
                       
-                    <a href="{% url 'reserve_book'  pk=book.pk %}" class="btn btn-lg btn-outline-primary text-uppercase reserve"> <i class="fas fa-bookmark" style="margin: 5px"></i> Reserve </a>
-                    <a href="{% url 'delete_reserved_book'  pk=book.pk %}" class="btn btn-lg btn-outline-primary text-uppercase delete_reserved"> <i class="fas fa-trash-alt" style="margin: 5px"></i> Delete from my reserved books</a>
-                    
+
+
+
+                    <a href="{% url 'give' user=xx pk=book.pk %}" class="btn btn-lg btn-outline-primary text-uppercase admin_delete_reserved"> <i class="fas fa-angle-double-up" style="margin: 5px"></i> Activate book loan</a>
+                    <a href="{% url 'take' user=xx pk=book.pk %}" class="btn btn-lg btn-outline-primary text-uppercase admin_delete_loaned"> <i class="fas fa-angle-double-down" style="margin: 5px"></i> Book returned</a>                    
                   
                   </div>
                 </div>
@@ -69,16 +71,19 @@
         
         
 
-          if(vars[4]=='none'){
-            $('.reserve').hide()
-            $('.delete_reserved').hide()
-          }else if (vars[4]=='delete_reserve'){
+        if(vars[4]=='admin_give'){
+            $('.admin_delete_loaned').hide()
+        }else if(vars[4]=='admin_take'){
             $('.admin_delete_reserved').hide()
-          }else if(vars[4]=='reserve'){
-            $('.delete_reserved').hide()
-          }
+        }
 
      </script>
      
   
 {% endblock %}
+
+
+
+
+
+

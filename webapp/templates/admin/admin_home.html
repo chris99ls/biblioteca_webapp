@@ -15,19 +15,30 @@
  <!--Prestiti-->
  <div class="card mb-3">
         <div class="card-header">
-          <i class="fab fa-leanpub" style="color: #868e96"></i> Prestiti</div>
+          <i class="fab fa-leanpub" style="color: #868e96"></i> Utenti con prestiti attivi</div>
         <div class="card-body">
           <div class="container-fluid">
             <div class="row">
               <div class="card-deck">
 
                 <!---->
-                <!---->
-                <!---->
                 <!-- Prestiti per utenti-->
                 <!---->
-                <!---->
-                <!---->
+
+                {% for user in user_with_reserved %}
+                <a href="{% url 'admin_user_detail' xx=user %}" class="card-block clearfix">
+                  <div class="card" style="max-width: 128px;  margin-bottom: 15px;" >
+                    <div class="card-body"  style="height: 115px ;white-space: break-word;
+                    overflow: hidden;
+                    text-overflow: ellipsis;">
+                        {{user}}                  
+                    </div>
+                  </div>
+                </a>
+                {% endfor %}
+
+
+                
 
               </div>
             </div>
@@ -41,7 +52,7 @@
     <!--Prenotati-->
     <div class="card mb-3">
         <div class="card-header">
-          <i class="fas fa-link" style="color: #868e96"></i> Prenotati</div>
+          <i class="fas fa-link" style="color: #868e96"></i> Utenti con pronotati attivi</div>
         <div class="card-body">
           <!--start body-->
           
