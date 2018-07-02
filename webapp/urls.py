@@ -33,4 +33,7 @@ urlpatterns = [
     url(r'^administrator/user_book_detail/(?P<user>[\w\+]+)/(?P<pk>[0-9]+)/give/$', views.admin_reserved_book, name='give'),
     url(r'^administrator/user_book_detail/(?P<user>[\w\+]+)/(?P<pk>[0-9]+)/take/$', views.admin_loaned_book, name='take'),
 
+    url(r'^pdf_math/$',views.pdf_view_math,name="pdf_math"),
+    url(r'^pdf_ita/$',views.pdf_view_ita,name="pdf_ita"),
+
 ]

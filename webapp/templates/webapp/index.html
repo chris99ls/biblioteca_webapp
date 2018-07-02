@@ -21,9 +21,18 @@
 	<!-- Fonts -->
 	<!--link href="style/fonts/webfont-raleway/webfont-raleway.css" rel="stylesheet" type="text/css"-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
 
 	<!-- Stylesheets -->
 	<link href="{% static 'css/global.css' %}" type="text/css" rel="stylesheet" media="all">
+
+
+    <!-- CSS Custom -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app/style.css' %}">
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 
 	<!-- Scripts preload -->
 	<!--[if lt IE 9]><script src="style/js/html5shiv.js"></script><![endif]-->
@@ -40,14 +49,8 @@
 	<div id="start" class="start">&nbsp;</div>
 	<div class="maxwidth1050">&nbsp;</div>
 
-
-
-
-
-
-
 	<!-- Header -->
-	<header class="header">
+	<header class="header" style="background:transparent;background-image:none;border-color:transparent;box-shadow:none;">
 		<div class="header__wrapper">
 			<div class="header__hamburger">
 				<div class="header__hamburger-block">&nbsp;</div>
@@ -69,20 +72,11 @@
 				</a>
 			</nav>
 
-			
-
 			<div class="header__social-icons">
 				<div class="search-container" >
 						<a href="{% url 'admin_home' %}" class="hero__button  " style="font-size: 100%">Admin Log In &nbsp; <i class="fas fa-user-tie"></i></a>
 				</div>
-
 			</div>
-
-
-
-
-
-
 			<a href="#start" class="header__title-wrapper  js-smooth-scroll">
 				<div class="header__title-main">Biblioteca</div>
 				<div class="header__title-sub">By Christian Lisi</div>
@@ -90,12 +84,6 @@
 		</div>
 	</header>
 	<!-- End Header -->
-
-
-
-
-
-
 
 
 	<!-- First Fixed "Hero" Section -->
@@ -106,11 +94,8 @@
 		<div class="hero__content">
 				
 		<div class="hero__content-wrapper">
-				
-
-		
 				<div class="hero__title-wrapper">
-					<div class="hero__title-large">Hello!</div>
+					<div class="hero__title-large" style="margin-bottom:25%;">Hello!</div>
 					<div class="hero__title-small">This is Biblioteca.</div>
 
 						<!--BOTTONE ENTRA IN LIBRERIA-->
@@ -120,20 +105,7 @@
 					<div class="hero__call-to-action">
 							<a href="{% url 'register' %}" class="hero__button  ghost-button  ghost-button--hero" style="width: 80%">Sign Up&nbsp; <i class="fas fa-user-plus"></i></a>
 					</div>
-
-
-
 				</div>
-				<div class="hero__photo-wrapper">
-					<div class="hero__photo">
-						<!--<div class="hero__hat">&nbsp;</div>-->
-					</div>
-				</div>
-
-
-
-			
-
 			</div>
 		</div>
 	</section>
@@ -147,15 +119,14 @@
 
 		<!-- "Experience" Section -->
 		<section id="experience" class="experience">
-			<div class="experience__hollow-arrow">&nbsp;</div>
 			<div class="experience__wrapper">
-				<div class="section-header">
-					<div class="section-header__title  section-header__title--experience">My Skills...</div>
-					<div class="section-header__subtitle">Software and technologies that I used in this project</div>
+				<div class="section_heading section_heading_2">
+					<h2> My Skills </h2>
+				
+					<h4>Software and technologies that I used in this project</h4>
 				</div>
 				<div class="experience__icons-wrapper">
 					<div class="experience__icon ">
-					
 						<img src="{% static 'img/exp/exp_django.svg'%}" width= "100%" height="110px"> 					
 						<div class="experience__icon-description">DJANGO</div>
 					</div>
@@ -183,134 +154,58 @@
 						<div class="experience__icon-description">Adobe Illustrator</div>
 					</div>
 					<div class="experience__icon  experience__icon--bootstrap">
-						<div class="experience__icon-description">Bootstrap 3</div>
+						<div class="experience__icon-description">Bootstrap 4</div>
 					</div>
 
+				
 				</div>
 			</div>
 		</section>
 		<!-- End "Experience" Section -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 		<!-- "Features" Section -->
 		<section id="features" class="features">
 			<div class="features__wrapper">
-				<div class="section-header">
-					<div class="section-header__title  section-header__title--features">I Provide Websites...</div>
-					<div class="section-header__subtitle">I try my best to fulfill these points for the greatest possible customer satisfaction</div>
-				</div>
-				<div class="features__elements-wrapper">
-					<div class="features__element">
-						<div class="features__image  features__image--mobile">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Responsive and Mobile Friendly</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam.</div>
-						</div>
+							<div class="col-md-12">
+								<div class="section_heading section_heading_2">
+									<h2> Our mobile app </h2>
+								
+									<h4> We have also an app which helps you to make your life simpler</h4>
+								</div>
+								
+								<div class="col-md-5 pull-right">
+									<div class="services_detail">
+										<ul>
+											<li>
+												<a href="#"><span><i class="fa fa-rocket" aria-hidden="true"></i></span> 
+												<h5> Get it now! </h5></a>
+												<p style="font-size: 11px;"> And unleash the full power of our service</p>
+											</li>
+										</ul>
+										
+									</div>
+								</div>
+								<div class="col-md-7">
+									<div class="services_img">
+										<img src="{% static 'app_images/services_img1.png' %}" alt="image-1">
+									</div>
+										
+									<div class="services_img_n">
+										<img src="{% static 'app_images/services_img2.png' %}" alt="image-1">
+									</div>
+								</div>
 					</div>
-					<div class="features__element">
-						<div class="features__image  features__image--newest">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Made with Newest Technologies</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-						</div>
-					</div>
-					<div class="features__element">
-						<div class="features__image  features__image--intuitive">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Visually Attractive and Intuitive</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea.</div>
-						</div>
-					</div>
-					<div class="features__element">
-						<div class="features__image  features__image--browsers">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Compatible with Every Browser</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam, natus est eos fugit doloremque dolorum.</div>
-						</div>
-					</div>
-					<div class="features__element">
-						<div class="features__image  features__image--clients">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Unique for Every Client</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam.</div>
-						</div>
-					</div>
-					<div class="features__element">
-						<div class="features__image  features__image--fast">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Fast and Performant</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea placeat quidem.</div>
-						</div>
-					</div>
-					<div class="features__element">
-						<div class="features__image  features__image--seo">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Search Engine Friendly</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti.</div>
-						</div>
-					</div>
-					<div class="features__element">
-						<div class="features__image  features__image--secure">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Secure</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam, natus.</div>
-						</div>
-					</div>
-					<div class="features__element">
-						<div class="features__image  features__image--semantic">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Semantic</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam, natus est eos fugit doloremque.</div>
-						</div>
-					</div>
-					<div class="features__element">
-						<div class="features__image  features__image--sourcefiles">&nbsp;</div>
-						<div class="features__text">
-							<div class="features__title">Provided with Source Code</div>
-							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea.</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End "Features" Section -->
-
-
-
-
-
-
-		<!-- Footer -->
-		<footer id="footer" class="footer">
-			<div class="footer__wrapper">
-				<div class="footer__copyright">Biblioteca &copy; 2018</div>
+				</section>
 				
-			</div>
-		</footer>
-		<!-- End Footer -->
-
-
-
-
+			
+		<!-- End "Features" Section -->
 
 
 
 
 	</div>
 	<!-- End Scrollable Content -->
-
+	
 	<!-- Scripts postload -->
 	<script src="{% static '/js/dependencies.min.js' %}" type="text/javascript"></script>
 	<script src="{% static '/js/global.js' %}" type="text/javascript"></script>

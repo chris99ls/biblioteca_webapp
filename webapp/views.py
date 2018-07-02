@@ -10,6 +10,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.utils import timezone
 from django.db.models import Q
 from django.db.models import Count
+from django.http import HttpResponse
 
 
 import urllib.request
@@ -211,3 +212,18 @@ def admin_loaned_book(request,user,pk):
 
     return redirect(admin_home)
 
+
+def pdf_view_math(request):
+    with open('C:\\Users\\Christian\\Desktop\\biblioteca_webapp\\webapp\\matematica.pdf', 'rb') as pdf:
+        response = HttpResponse(pdf.read(), content_type='application/pdf')
+        response['Content-Disposition'] = 'inline;filename=some_file.pdf'
+        return response
+    pdf.closed
+
+
+def pdf_view_ita(request):
+    with open('C:\\Users\\Christian\\Desktop\\biblioteca_webapp\\webapp\\italiano.pdf', 'rb') as pdf:
+        response = HttpResponse(pdf.read(), content_type='application/pdf')
+        response['Content-Disposition'] = 'inline;filename=some_file.pdf'
+        return response
+    pdf.closed
